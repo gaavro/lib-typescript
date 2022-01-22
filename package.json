@@ -1,6 +1,6 @@
 {
   "name": "@gaavro/entrega-4",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": "git@gitlab.com:gaavro/entrega-4.git",
@@ -15,6 +15,8 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
-    "axios": "^0.25.0"
+    "@gaavro/entrega-4": "^1.0.1",
+    "axios": "^0.25.0",
+    "dotenv": "^14.2.0"
   }
 }
