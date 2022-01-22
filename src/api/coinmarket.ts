@@ -15,7 +15,7 @@ axiosInstance: AxiosInstance;
     });
     }
 
-    async quotes(symbol: string)  {
+    async quotes(symbol: Array<String>)  {
        let output
         try {
             const response = await this.axiosInstance.get(
@@ -27,6 +27,7 @@ axiosInstance: AxiosInstance;
               }
             );
             output = response.data;
+            
           } catch (error) {
             if (axios.isAxiosError(error)) {
               output = error.response?.data as Error404;

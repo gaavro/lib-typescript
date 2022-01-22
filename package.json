@@ -1,9 +1,9 @@
 {
-  "name": "entrega-4",
+  "name": "@gaavro/entrega-4",
   "version": "1.0.1",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "repository": "git@gitlab.com:denissk/kenzie-gutendex.git",
+  "repository": "git@gitlab.com:gaavro/entrega-4.git",
   "author": "Gabriela Rodrigues <gabrielarodrigues432@gmail.com>",
   "license": "MIT",
   "scripts": {

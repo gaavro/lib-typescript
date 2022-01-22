@@ -3,8 +3,8 @@ export { Convert, Quote, ApiKey } from "./types/coinmarket";
 
 export const krypto= new KenCrypto();
 
-const quotes_data = krypto.quotes('BTC').then(resp=>{
-    console.log(resp)
+const quotes_data = krypto.quotes(['BTC']).then(resp=>{
+    console.log(resp.quote)
 })
 
 const conversion_data = krypto.conversion('BTC', 0.005, 'ETH').then(resp=>{
