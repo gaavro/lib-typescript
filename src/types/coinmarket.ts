@@ -1,5 +1,5 @@
 export interface Quote {
-  
+  data:{
     id: number;
     name: string;
     symbol: string;
@@ -16,7 +16,7 @@ export interface Quote {
     is_fiat: number;
     last_updated: string;
     quote: {
-        USD: {
+        [mimeType: string]:{
         price: number;
         volume_24h: number;
         volume_change_24h: number;
@@ -33,6 +33,8 @@ export interface Quote {
         };
     };
     };
+}
+
 
 
 export interface Convert {

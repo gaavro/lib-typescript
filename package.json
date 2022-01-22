@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@gaavro/entrega-4": "^1.0.1",
+    "@types/node": "^17.0.10",
     "axios": "^0.25.0",
     "dotenv": "^14.2.0"
   }

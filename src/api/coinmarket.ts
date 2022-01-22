@@ -16,7 +16,7 @@ axiosInstance: AxiosInstance;
     }
 
     async quotes(symbol: Array<String>)  {
-       let output
+       let result
         try {
             const response = await this.axiosInstance.get(
               `cryptocurrency/quotes/latest?symbol=${symbol}`,
@@ -26,20 +26,20 @@ axiosInstance: AxiosInstance;
                 },
               }
             );
-            output = response.data;
-            
+            result = response.data;
+            console.log(result)
           } catch (error) {
             if (axios.isAxiosError(error)) {
-              output = error.response?.data as Error404;
+              result = error.response?.data as Error404;
             }
           }
-          return output as Quote;
+          return result as Quote;
         }
     
 
 
     async conversion(symbol: string, amount:number, convert: string)  {
-        let output
+        let result
          try {
             const response = await this.axiosInstance.get(
                 `/tools/price-conversion?amount=${amount}&symbol=${symbol}&convert=${convert}`,
@@ -49,12 +49,12 @@ axiosInstance: AxiosInstance;
                  },
                }
              );
-             output = response.data;
+             result = response.data;
            } catch (error) {
              if (axios.isAxiosError(error)) {
-               output = error.response?.data as Error404;
+               result = error.response?.data as Error404;
              }
            }
-           return output as Convert;
+           return result as Convert;
          }
      }
