@@ -1,40 +1,27 @@
-export interface Quote {
-  data:{
-    id: number;
-    name: string;
-    symbol: string;
-    slug: string;
-    num_market_pairs: number;
-    date_added: string;
-    tags: Array<string>;
-    max_supply: number;
-    circulating_supply: number;
-    total_supply: number;
-    is_active: number;
-    platform: any;
-    cmc_rank: number;
-    is_fiat: number;
-    last_updated: string;
-    quote: {
-        [mimeType: string]:{
-        price: number;
-        volume_24h: number;
-        volume_change_24h: number;
-        percent_change_1h: number;
-        percent_change_24h: number;
-        percent_change_7d: number;
-        percent_change_30d: number;
-        percent_change_60d: number;
-        percent_change_90d: number;
-        market_cap: number;
-        market_cap_dominance: number;
-        fully_diluted_market_cap: number;
-        last_updated: string;
-        };
-    };
-    };
-}
+export interface CoinMarket {
+    data: QuotesData;
+  }
 
+  export interface QuotesData {
+    [key: string]: {
+      id: number;
+      name: string;
+      symbol: string;
+      slug: string;
+      date_added: Date;
+      total_supply: 33988299055.005;
+      last_updated: Date;
+      quote: QuoteData;
+    };
+  }
+
+
+  export interface QuoteData {
+    [key: string]: {
+      price: number;
+      last_updated: Date;
+    };
+  }
 
 
 export interface Convert {

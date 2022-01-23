@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 import * as dotenv from "dotenv";
-import { Quote, Convert, Error404 } from "../types/coinmarket";
+import { Convert, Error404, CoinMarket } from "../types/coinmarket";
 import { ApiKey } from "../types/coinmarket";
 
 dotenv.config();
@@ -26,14 +26,14 @@ axiosInstance: AxiosInstance;
                 },
               }
             );
-            result = response.data;
+            result = response.data.data 
             console.log(result)
           } catch (error) {
             if (axios.isAxiosError(error)) {
               result = error.response?.data as Error404;
             }
           }
-          return result as Quote;
+          return result as CoinMarket;
         }
     
 
