@@ -26,7 +26,7 @@ axiosInstance: AxiosInstance;
                 },
               }
             );
-            result = response.data.data 
+            result = response.data
             console.log(result)
           } catch (error) {
             if (axios.isAxiosError(error)) {
