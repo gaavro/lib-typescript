@@ -3,21 +3,21 @@ export interface CoinMarket {
   }
 
   export interface QuotesData {
-    [key: string]: {
+    [mimetype: string]: {
       id: number;
       name: string;
       symbol: string;
       slug: string;
       date_added: Date;
-      total_supply: 33988299055.005;
       last_updated: Date;
       quote: QuoteData;
+      USD: QuoteData;
     };
   }
 
 
   export interface QuoteData {
-    [key: string]: {
+    [mimetype: string]: {
       price: number;
       last_updated: Date;
     };
@@ -30,15 +30,10 @@ data: {
     symbol: string;
     name: string;
     amount: number;
-    last_updated: string;
-    quote: {
-    [mimeType: string]: {
-        price: number;
-        last_updated: string;
-    };
+    last_updated: Date;
+    quote: QuoteData
     };
 };
-}
 
 export interface Error404 {
     detail: string
